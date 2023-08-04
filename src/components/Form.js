@@ -18,6 +18,7 @@ const App = () => {
 
     const [userValue, setUserValue] = useState("")
     const [tasksArray, setTasksArray] = useState([])
+    const [countTasks, setCountTasks] = useState(0)
 
 
     const formSubmit = (event) => {
@@ -36,6 +37,7 @@ const App = () => {
             })
 
             setUserValue("")
+            setCountTasks(countTasks + 1)
             succesNotify()
 
         } else {
@@ -58,6 +60,7 @@ const App = () => {
 
         })
 
+        setCountTasks(countTasks - 1)
         setTasksArray(filtredTasks)
 
     }
@@ -76,7 +79,7 @@ const App = () => {
         <li></li>
         <li></li>
 
-        <div  className="form-wrapper">
+        <div className="form-wrapper">
 
 
 
@@ -110,8 +113,9 @@ const App = () => {
                 <input onChange={(event) => setUserValue(event.target.value)}
                     className="my-input" type="text" value={userValue} placeholder="Zde zadejte Váš úkol" />
                 <input className="my-button" type="submit" value="Přidat úkol" />
-            </form>
 
+            </form>
+            <p className="count-tasks">Počet úkolů: {countTasks}</p>
 
             <div className="user-data-wrapper">
                 {
@@ -132,6 +136,8 @@ const App = () => {
 
                     })}
             </div>
+
+
 
         </div>
     </ul>)

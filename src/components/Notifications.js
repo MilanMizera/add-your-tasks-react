@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css'
 
 
 export const errorNotify = () => toast.error('Nezadali jste žádný úkol', {
-    position: "top-right",
+    position: "top-center",
     autoClose: 2000,
     hideProgressBar: false,
     closeOnClick: true,
@@ -19,7 +19,7 @@ export const errorNotify = () => toast.error('Nezadali jste žádný úkol', {
 export const succesNotify = () => {
 
     toast.success('Úspěšně jste přidali Váš úkol', {
-        position: "top-right",
+        position: "top-center",
         autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
