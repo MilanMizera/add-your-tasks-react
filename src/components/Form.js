@@ -66,18 +66,13 @@ const App = () => {
     }
 
 
-    return (<ul className="background">
+    return (<div>
 
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <ul className="background">
+
+            <li></li> <li></li> <li></li> <li></li> <li></li>
+            <li></li> <li></li> <li></li> <li></li> <li></li>
+        </ul>
 
         <div className="form-wrapper">
 
@@ -140,7 +135,7 @@ const App = () => {
 
 
         </div>
-    </ul>)
+    </div>)
 }
 
 

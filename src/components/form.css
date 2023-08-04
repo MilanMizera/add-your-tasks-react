@@ -13,6 +13,7 @@
 }
 
 .background {
+    z-index: -1;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -43,7 +44,7 @@
     height: 125px;
     bottom: -125px;
     animation-delay: 1s;
-    z-index: 1;
+
 
 
 }
@@ -54,7 +55,7 @@
     height: 101px;
     bottom: -101px;
     animation-delay: 3s;
-    z-index: -1;
+
 }
 
 .background li:nth-child(2) {
@@ -63,7 +64,7 @@
     height: 146px;
     bottom: -146px;
     animation-delay: 6s;
-    z-index: -1;
+
 }
 
 .background li:nth-child(3) {
@@ -72,7 +73,7 @@
     height: 115px;
     bottom: -115px;
     animation-delay: 9s;
-    z-index: -1;
+
 }
 
 .background li:nth-child(4) {
@@ -81,7 +82,7 @@
     height: 190px;
     bottom: -190px;
     animation-delay: 19s;
-    z-index: -1;
+
 }
 
 .background li:nth-child(5) {
@@ -90,7 +91,7 @@
     height: 160px;
     bottom: -160px;
     animation-delay: 7s;
-    z-index: -1;
+
 }
 
 .background li:nth-child(6) {
@@ -99,7 +100,7 @@
     height: 187px;
     bottom: -187px;
     animation-delay: 24s;
-    z-index: -1;
+
 }
 
 .background li:nth-child(7) {
@@ -108,7 +109,7 @@
     height: 114px;
     bottom: -114px;
     animation-delay: 22s;
-    z-index: -1;
+
 }
 
 .background li:nth-child(8) {
@@ -117,7 +118,7 @@
     height: 159px;
     bottom: -159px;
     animation-delay: 27s;
-    z-index: -1;
+
 }
 
 .background li:nth-child(9) {
@@ -126,13 +127,12 @@
     height: 134px;
     bottom: -134px;
     animation-delay: 39s;
-    z-index: -1;
+
 }
 
 .form-wrapper {
 
     margin-top: 100px;
-    z-index: 100;
     box-shadow: -10px 5px 79px 0px rgba(252, 197, 88, 0.7);
     background-color: aliceblue;
     width: 70%;
@@ -279,7 +279,7 @@
     border-radius: 10px;
     margin-top: 20px;
     padding: 10px 0px;
-   
+
 
 }
 
@@ -330,4 +330,12 @@
 
 
 
+}
+
+.count-tasks {
+
+
+    margin-left: 50px;
+
+g
 }
