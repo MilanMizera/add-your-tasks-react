@@ -136,7 +136,7 @@
     box-shadow: -10px 5px 79px 0px rgba(252, 197, 88, 0.7);
     background-color: aliceblue;
     width: 70%;
-    height: 400px;
+    height: auto;
     margin: 0px auto;
     margin-top: 120px;
     padding: 50px 0px;
@@ -268,7 +268,7 @@
 .user-data-section {
 
     width: 40%;
-    height: 50px;
+    height: auto;
     background-color: white;
     display: flex;
     align-items: center;
@@ -278,6 +278,8 @@
     border: 2px dotted rgb(162, 91, 16);
     border-radius: 10px;
     margin-top: 20px;
+    padding: 10px 0px;
+   
 
 }
 
