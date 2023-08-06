@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import "./form.css"
 //ikonky
 import { AiOutlineEdit } from "react-icons/ai";
@@ -21,6 +21,15 @@ const App = () => {
     const [countTasks, setCountTasks] = useState(0)
 
 
+    useEffect(()=>{localStorage.setItem("task", JSON.stringify(tasksArray))}, [tasksArray])
+
+    useEffect(()=>{
+        
+       const data =  localStorage.getItem("task")
+       setTasksArray(JSON.parse(data))
+        
+    }, [])
+
     const formSubmit = (event) => {
         // preventDefault vypne refrešování formuláře, aby tam zůstala hodnota od uživatele, ale pozor musí být definováná parametr s názvem event
         event.preventDefault()
@@ -35,6 +44,9 @@ const App = () => {
                 return [...tasksArray, newTask]
 
             })
+
+
+
 
             setUserValue("")
             setCountTasks(countTasks + 1)
