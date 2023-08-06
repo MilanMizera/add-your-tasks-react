@@ -19,20 +19,46 @@ const App = () => {
     const [userValue, setUserValue] = useState("")
     const [tasksArray, setTasksArray] = useState([])
     const [countTasks, setCountTasks] = useState(0)
+    const [editId, setEditId] = useState(0)
 
 
-    useEffect(()=>{localStorage.setItem("task", JSON.stringify(tasksArray))}, [tasksArray])
+    useEffect(() => {
 
-    useEffect(()=>{
-        
-       const data =  localStorage.getItem("task")
-       setTasksArray(JSON.parse(data))
-        
+        localStorage.setItem("task", JSON.stringify(tasksArray))
+    }, [tasksArray],)
+
+    useEffect(() => {
+
+        const data = localStorage.getItem("task")
+        if (data) {
+            setTasksArray(JSON.parse(data))
+            //nem+lo by vypisovaat prázdné pole
+            console.log(data)
+        }
+        else {
+            console.log("nemám žádné data")
+        }
+
     }, [])
 
     const formSubmit = (event) => {
         // preventDefault vypne refrešování formuláře, aby tam zůstala hodnota od uživatele, ale pozor musí být definováná parametr s názvem event
         event.preventDefault()
+
+        if (editId) {
+            const editTodo = tasksArray.find((oneTask) => oneTask.id === editId);
+
+            const updatedTodos = tasksArray.map((oneTask) =>
+                oneTask.id === editTodo.id
+                    ? (oneTask = { id: oneTask.id, userValue })
+                    : { id: oneTask.id, todo: oneTask.userValue }
+
+            )
+            setTasksArray(updatedTodos)
+            setEditId(0)
+            setUserValue("")
+            return
+        }
 
 
         if (userValue && userValue.length < 27) {
@@ -44,9 +70,6 @@ const App = () => {
                 return [...tasksArray, newTask]
 
             })
-
-
-
 
             setUserValue("")
             setCountTasks(countTasks + 1)
@@ -74,6 +97,20 @@ const App = () => {
 
         setCountTasks(countTasks - 1)
         setTasksArray(filtredTasks)
+
+    }
+
+    const handleEdit = (localId) => {
+
+        const editTask = tasksArray.find((oneTask) => {
+
+            return oneTask.id === localId
+
+        })
+
+
+        setUserValue(editTask.taskName)
+        setEditId(localId)
 
     }
 
@@ -135,8 +172,8 @@ const App = () => {
 
                             <div key={oneTask.id} className="user-data-section">
 
-                                <p className="user-data-paragraf">{oneTask.taskName.toLowerCase()}</p>
-                                <AiOutlineEdit className="edit-icon"></AiOutlineEdit> <GoTrash onClick={() => deleteTask(oneTask.id)} className="trash-icon"></GoTrash>
+                                <p className="user-data-paragraf">{oneTask.taskName}</p>
+                                <AiOutlineEdit onClick={() => handleEdit(oneTask.id)} className="edit-icon"></AiOutlineEdit> <GoTrash onClick={() => deleteTask(oneTask.id)} className="trash-icon"></GoTrash>
 
                             </div>
                         )

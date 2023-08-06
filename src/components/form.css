@@ -133,7 +133,7 @@
 .form-wrapper {
 
     margin-top: 100px;
-    box-shadow: -10px 5px 79px 0px rgba(252, 197, 88, 0.7);
+    box-shadow: -10px 5px 79px 0px rgba(10, 7, 0, 0.7);
     background-color: aliceblue;
     width: 70%;
     height: auto;
@@ -336,6 +336,7 @@
 .count-tasks {
 
 
-    margin-left: 50px;
+   
+    text-align: center;
 
 }
