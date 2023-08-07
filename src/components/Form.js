@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom";
 import "./form.css"
 //ikonky
 import { AiOutlineEdit } from "react-icons/ai";
@@ -157,7 +158,7 @@ const App = () => {
 
          <div className="login-section">
             <div className="login-background-btn">
-        <a className="login-text">Přihlásit se</a> <CiLogin className="login-icon"></CiLogin>
+            <Link to="/prihlaseni" className="login-text">Přihlásit se</Link> <CiLogin className="login-icon"></CiLogin>
         </div>
         </div>
 

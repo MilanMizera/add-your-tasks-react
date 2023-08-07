@@ -140,9 +140,15 @@ cursor: pointer;
 
 }
 
+.login-background-btn:hover {
+
+    animation: none;
+}
+
 .login-text {
 
 font-size: 20px;
+text-decoration: none;
 
 }
 

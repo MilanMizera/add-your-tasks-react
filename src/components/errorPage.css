@@ -1,0 +1,27 @@
+
+
+
+.number {
+color: orange;
+text-align: center;
+font-size: 100px;
+margin: 0px;
+}
+
+.text {
+
+text-align: center;
+font-size: 50px;
+margin: 0px;
+
+}
+
+.error-section {
+
+height: 50vh;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+
+}
