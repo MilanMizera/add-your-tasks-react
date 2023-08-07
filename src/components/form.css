@@ -1,16 +1,4 @@
-@keyframes animate {
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-        border-radius: 0;
-    }
 
-    100% {
-        transform: translateY(-1000px) rotate(720deg);
-        opacity: 0;
-        border-radius: 50%;
-    }
-}
 
 .background {
     z-index: -1;
@@ -188,26 +176,6 @@
     animation-fill-mode: both;
 }
 
-@-webkit-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
 .my-form {
 
     display: flex;
@@ -293,6 +261,32 @@
     animation-fill-mode: both;
 }
 
+
+.trash-icon,
+.edit-icon {
+
+    font-size: 20px;
+    color: orange;
+    margin-right: 20px;
+    cursor: pointer;
+
+
+
+}
+
+.count-tasks {
+
+
+   
+    text-align: center;
+
+}
+
+
+
+
+/*Keyframes*/
+
 @-webkit-keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -321,22 +315,36 @@
     }
 }
 
-.trash-icon,
-.edit-icon {
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
 
-    font-size: 20px;
-    color: orange;
-    margin-right: 20px;
-    cursor: pointer;
-
-
-
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
 }
 
-.count-tasks {
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
 
+    100% {
+        opacity: 1;
+    }
+}
 
-   
-    text-align: center;
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
 
+    100% {
+        opacity: 1;
+    }
 }

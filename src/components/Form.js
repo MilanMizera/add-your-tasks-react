@@ -12,34 +12,70 @@ import 'react-toastify/dist/ReactToastify.css'
 import { succesNotify, errorNotify } from "./Notifications";
 
 
+const getArrayTasks = () => {
+
+    let list = localStorage.getItem("tasks")
+
+    if (list) {
+
+        return JSON.parse(localStorage.getItem("tasks"))
+
+
+    } else {
+
+
+
+        return []
+    }
+}
+
+const getCountTasks = () => {
+
+
+    let list = localStorage.getItem("countTasks")
+
+    if (list) {
+
+        return JSON.parse(localStorage.getItem("countTasks"))
+
+
+    } else {
+
+
+
+        return 0
+    }
+
+
+
+
+}
+
+
+
+
 
 
 const App = () => {
 
     const [userValue, setUserValue] = useState("")
-    const [tasksArray, setTasksArray] = useState([])
-    const [countTasks, setCountTasks] = useState(0)
+    const [tasksArray, setTasksArray] = useState(getArrayTasks)
+    const [countTasks, setCountTasks] = useState(getCountTasks)
     const [editId, setEditId] = useState(0)
 
+    useEffect(() => {
+
+        localStorage.setItem("tasks", JSON.stringify(tasksArray))
+
+    }, [tasksArray])
 
     useEffect(() => {
 
-        localStorage.setItem("task", JSON.stringify(tasksArray))
-    }, [tasksArray],)
+        localStorage.setItem("countTasks", JSON.stringify(countTasks))
 
-    useEffect(() => {
+    }, [countTasks])
 
-        const data = localStorage.getItem("task")
-        if (data) {
-            setTasksArray(JSON.parse(data))
-            //nem+lo by vypisovaat prázdné pole
-            console.log(data)
-        }
-        else {
-            console.log("nemám žádné data")
-        }
 
-    }, [])
 
     const formSubmit = (event) => {
         // preventDefault vypne refrešování formuláře, aby tam zůstala hodnota od uživatele, ale pozor musí být definováná parametr s názvem event
