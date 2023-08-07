@@ -3,6 +3,8 @@ import "./form.css"
 //ikonky
 import { AiOutlineEdit } from "react-icons/ai";
 import { GoTrash } from "react-icons/go";
+import { CiLogin } from "react-icons/ci";
+
 // automaticky psaný text
 import Typewriter from 'typewriter-effect';
 
@@ -152,6 +154,12 @@ const App = () => {
 
 
     return (<div>
+
+         <div className="login-section">
+            <div className="login-background-btn">
+        <a className="login-text">Přihlásit se</a> <CiLogin className="login-icon"></CiLogin>
+        </div>
+        </div>
 
         <ul className="background">
 
