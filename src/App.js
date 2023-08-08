@@ -1,8 +1,8 @@
-import Form from "./components/Form";
+import Form from "./pages/TasksPage/Form";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Register from "./components/Register";
-import Login from "./components/Login";
-import ErrorPage from "./components/ErrorPage";
+import Register from "./pages/registerPage/Register";
+import Login from "./pages/loginPage/Login";
+import ErrorPage from "./pages/errorPage/ErrorPage";
 
 function App() {
   return <BrowserRouter>

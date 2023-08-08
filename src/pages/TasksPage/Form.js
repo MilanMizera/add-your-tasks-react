@@ -12,7 +12,7 @@ import Typewriter from 'typewriter-effect';
 // automatické zprávy (flashmessage)
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
-import { succesNotify, errorNotify } from "./Notifications";
+import { succesNotify, errorNotify } from "../../data/Notifications";
 
 
 const getArrayTasks = () => {
