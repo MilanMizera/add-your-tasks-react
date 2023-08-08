@@ -1,10 +1,12 @@
 import Form from "./pages/TasksPage/Form";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Register from "./pages/registerPage/Register";
-import Login from "./pages/loginPage/Login";
+import Register from "./pages/auth/registerPage/Register";
 import ErrorPage from "./pages/errorPage/ErrorPage";
+import Login from "./pages/auth/loginPage/Login";
 
-function App() {
+
+
+const App = () => {
   return <BrowserRouter>
     <Routes>
       <Route path="/" element={ <Form /> } />

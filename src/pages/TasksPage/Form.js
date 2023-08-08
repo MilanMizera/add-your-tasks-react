@@ -54,11 +54,6 @@ const getCountTasks = () => {
 
 }
 
-
-
-
-
-
 const App = () => {
 
     const [userValue, setUserValue] = useState("")
