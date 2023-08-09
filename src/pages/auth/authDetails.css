@@ -1,10 +1,37 @@
+.sign-out-section {
+
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+
+}
+
+
+
 .auth-user {
 
-
 text-align: center;
-color: orange;
+color: rgb(48, 37, 7);
 font-size: 30px;
 padding-top: 100px;
+
+
+
+
+}
+
+.sign-out-button {
+
+
+width: 10%;
+cursor: pointer;
+margin-top: 20px;
+padding: 10px;
+border-radius: 10px;
+border: 1px solid black;
 
 
 }

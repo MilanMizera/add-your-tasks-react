@@ -1,4 +1,4 @@
-//react
+import "./authDetails.css"
 import { useEffect, useState } from "react"
 //database
 import { auth } from "../../data/firebase"
@@ -42,9 +42,9 @@ export const AuthDetails = () => {
       };
 
 
-    return (
-
-        <div>{authUser ? <><p>{"Přihlášen jako " + authUser.email}</p><button onClick={userSignOut}>Odhlásit se</button></> : <p>Byl jste úspěšně odhlášen</p>}</div>
+    return ( 
+    
+    <div className="sign-out-section">{authUser ? <><p className="auth-user">{"Přihlášen jako " + authUser.email}</p><button className="sign-out-button" onClick={userSignOut}>Odhlásit se</button></> : <p className="auth-user">Nejte přihlášený</p>}</div>
 
     )
 }
