@@ -149,6 +149,14 @@ cursor: pointer;
 
 font-size: 20px;
 text-decoration: none;
+display: flex;
+background-color: aliceblue;
+align-items: center;
+justify-content: center;
+padding: 10px 20px;
+border-radius: 20px;
+animation: pulse 2s infinite;
+cursor: pointer;
 
 }
 
@@ -156,6 +164,7 @@ text-decoration: none;
 
     font-size: 30px;
     margin-left: 5px;
+    color: orange;
 }
 
 
@@ -175,6 +184,8 @@ text-decoration: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: 50px;
+
 
 
 
@@ -188,7 +199,7 @@ text-decoration: none;
 .Typewriter__wrapper {
 
     text-align: center;
-    color: orange;
+    color: rgb(17, 17, 17);
     margin-bottom: 50px;
     font-size: 35px;
 
@@ -242,7 +253,7 @@ text-decoration: none;
 
 .my-button {
 
-    width: 25%;
+    width: 15%;
     margin-top: 20px;
     background-color: orange;
     cursor: pointer;
@@ -263,7 +274,7 @@ text-decoration: none;
     flex-direction: column;
     background-color: aliceblue;
     padding-bottom: 20px;
-
+    
 }
 
 .user-data-paragraf {
@@ -290,6 +301,7 @@ text-decoration: none;
     border-radius: 10px;
     margin-top: 20px;
     padding: 10px 0px;
+    
 
 
 }

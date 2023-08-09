@@ -151,17 +151,20 @@ const App = () => {
 
     return (<div>
 
-         <div className="login-section">
-            <div className="login-background-btn">
-            <Link to="/prihlaseni" className="login-text">Přihlásit se</Link> <CiLogin className="login-icon"></CiLogin>
-        </div>
-        </div>
 
         <ul className="background">
 
             <li></li> <li></li> <li></li> <li></li> <li></li>
             <li></li> <li></li> <li></li> <li></li> <li></li>
         </ul>
+
+        <div className="login-section">
+            
+            <Link to="/prihlaseni" className="login-text">Přihlásit se
+            <CiLogin className="login-icon"></CiLogin>
+            </Link> 
+       
+        </div>
 
         <div className="form-wrapper">
 
