@@ -69,13 +69,40 @@ cursor: pointer;
     box-shadow: 0px 0px 42px -10px rgba(0,0,0,0.75);
     width: 50%;
     margin: auto;
-    height: 300px;
+    height: 400px;
     margin-top: 100px;
     border-radius: 50px;
     transform: translatey(0px);
 	animation: float 6s ease-in-out infinite;
   background-color: aliceblue;
+}
 
+.three-side-sign-in-wrapper {
+
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin-top: 20px;
+
+}
+
+.sign-in-icons-wrapper {
+
+display: flex;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: center;
+
+}
+
+.go-sign-in-icon, .fb-sign-in-icon {
+
+
+font-size: 25px;
+margin-right: 10px;
+margin-top: 5px;
+cursor: pointer;
 
 
 }
