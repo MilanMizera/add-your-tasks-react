@@ -77,14 +77,9 @@ const App = () => {
 
 
 
-    useEffect(() => {
 
-        localStorage.setItem("deleteAllTasks", JSON.stringify(deleteAllTasks))
-        console.log(deleteAllTasks)
 
-    }, [deleteAllTasks])
-
-    useEffect(()=> {
+useEffect(()=> {
 
     const data = localStorage.getItem("deleteAllTasks")
     setDeleteAllTasks(JSON.parse(data))
@@ -92,6 +87,16 @@ const App = () => {
 
 
     }, [])
+
+
+    useEffect(() => {
+
+        localStorage.setItem("deleteAllTasks", JSON.stringify(deleteAllTasks))
+        console.log(deleteAllTasks)
+
+    }, [deleteAllTasks])
+
+
 
     
 
