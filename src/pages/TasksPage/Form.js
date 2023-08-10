@@ -5,6 +5,7 @@ import "./form.css"
 import { AiOutlineEdit } from "react-icons/ai";
 import { GoTrash } from "react-icons/go";
 import { CiLogin } from "react-icons/ci";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
 // automaticky psaný text
 import Typewriter from 'typewriter-effect';
@@ -26,10 +27,7 @@ const getArrayTasks = () => {
 
         return JSON.parse(localStorage.getItem("tasks"))
 
-
     } else {
-
-
 
         return []
     }
@@ -40,7 +38,7 @@ const getCountTasks = () => {
 
     let list = localStorage.getItem("countTasks")
 
-    
+
     if (list) {
 
         return JSON.parse(localStorage.getItem("countTasks"))
@@ -48,9 +46,8 @@ const getCountTasks = () => {
 
     } else {
 
-
-
         return 0
+
     }
 
 }
@@ -62,6 +59,7 @@ const App = () => {
     const [countTasks, setCountTasks] = useState(getCountTasks)
     const [deleteAllTasks, setDeleteAllTasks] = useState(false)
     const [editId, setEditId] = useState(0)
+    const [warningVisibility, setWarningVisibility] = useState(true)
 
     useEffect(() => {
 
@@ -78,11 +76,12 @@ const App = () => {
 
 
 
+    // !POZOR! První vždy musí jít metoda getitem a až po ní setItem jinak to hodí error
 
-useEffect(()=> {
+    useEffect(() => {
 
-    const data = localStorage.getItem("deleteAllTasks")
-    setDeleteAllTasks(JSON.parse(data))
+        const data = localStorage.getItem("deleteAllTasks")
+        setDeleteAllTasks(JSON.parse(data))
 
 
 
@@ -95,12 +94,6 @@ useEffect(()=> {
         console.log(deleteAllTasks)
 
     }, [deleteAllTasks])
-
-
-
-    
-
-
 
 
 
@@ -157,18 +150,13 @@ useEffect(()=> {
             errorTaskNotify()
 
         }
-
-
-
     }
 
     const deleteTask = (localId) => {
 
         const filtredTasks = tasksArray.filter((oneTask) => {
 
-
             return oneTask.id !== localId
-
 
         })
 
@@ -185,7 +173,6 @@ useEffect(()=> {
 
         })
 
-
         setUserValue(editTask.taskName)
         setEditId(localId)
 
@@ -198,12 +185,16 @@ useEffect(()=> {
         setTasksArray([])
         setDeleteAllTasks(false)
 
+    }
+
+    const dontShowWarningVisibility = () => {
+
+        setWarningVisibility(false)
 
     }
 
 
     return (<div>
-
 
         <ul className="background">
 
@@ -211,7 +202,13 @@ useEffect(()=> {
             <li></li> <li></li> <li></li> <li></li> <li></li>
         </ul>
 
+        {warningVisibility && <div className="warning-wrapper">
+            <p className="warning-text">!Pozor! bez přihlášení můžete přijít o své uložené úkoly.</p>
+            <AiOutlineCloseCircle onClick={dontShowWarningVisibility} className="warning-close-icon"></AiOutlineCloseCircle>
+        </div>}
+
         <div className="login-section">
+
 
             <Link to="/prihlaseni" className="login-text">Přihlásit se
                 <CiLogin className="login-icon"></CiLogin>
@@ -220,8 +217,6 @@ useEffect(()=> {
         </div>
 
         <div className="form-wrapper">
-
-
 
             <ToastContainer
                 position="top-right"
@@ -236,7 +231,6 @@ useEffect(()=> {
                 pauseOnHover
                 theme="light"
             />
-
 
             <div className="typed-text-section">
                 <Typewriter className="Typewriter__wrapper"
@@ -279,11 +273,8 @@ useEffect(()=> {
                 {deleteAllTasks && <button className="delete-all-tasks" onClick={CleareAllLocalStorage} >Vymazat všechny úkoly</button>}
             </div>
 
-
-
         </div>
     </div>)
 }
-
 
 export default App
