@@ -69,10 +69,16 @@ cursor: pointer;
 	animation: float 6s ease-in-out infinite;
   background-color: aliceblue;
 
+}
+
+.password-must-contain {
+
+
+color: rgb(77, 77, 77);
+margin-bottom: 5px;
 
 
 }
-
 
 @keyframes float {
 	0% {
