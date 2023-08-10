@@ -15,6 +15,9 @@ import 'react-toastify/dist/ReactToastify.css'
 import { succesTaskNotify, errorTaskNotify } from "../../data/Notifications";
 
 
+
+
+
 const getArrayTasks = () => {
 
     let list = localStorage.getItem("tasks")
@@ -37,6 +40,7 @@ const getCountTasks = () => {
 
     let list = localStorage.getItem("countTasks")
 
+    
     if (list) {
 
         return JSON.parse(localStorage.getItem("countTasks"))
@@ -49,9 +53,6 @@ const getCountTasks = () => {
         return 0
     }
 
-
-
-
 }
 
 const App = () => {
@@ -59,6 +60,7 @@ const App = () => {
     const [userValue, setUserValue] = useState("")
     const [tasksArray, setTasksArray] = useState(getArrayTasks)
     const [countTasks, setCountTasks] = useState(getCountTasks)
+    const [deleteAllTasks, setDeleteAllTasks] = useState(false)
     const [editId, setEditId] = useState(0)
 
     useEffect(() => {
@@ -72,6 +74,28 @@ const App = () => {
         localStorage.setItem("countTasks", JSON.stringify(countTasks))
 
     }, [countTasks])
+
+
+
+    useEffect(() => {
+
+        localStorage.setItem("deleteAllTasks", JSON.stringify(deleteAllTasks))
+        console.log(deleteAllTasks)
+
+    }, [deleteAllTasks])
+
+    useEffect(()=> {
+
+    const data = localStorage.getItem("deleteAllTasks")
+    setDeleteAllTasks(JSON.parse(data))
+
+
+
+    }, [])
+
+    
+
+
 
 
 
@@ -108,6 +132,20 @@ const App = () => {
             setUserValue("")
             setCountTasks(countTasks + 1)
             succesTaskNotify()
+
+
+            const localStorageCountTasks = localStorage.getItem("countTasks")
+            console.log(localStorageCountTasks)
+
+            if (localStorageCountTasks >= 2) {
+
+                setDeleteAllTasks(true)
+            } else {
+
+                setDeleteAllTasks(false)
+
+            }
+
 
         } else {
 
@@ -148,6 +186,16 @@ const App = () => {
 
     }
 
+    const CleareAllLocalStorage = () => {
+
+        localStorage.clear();
+        setCountTasks(0)
+        setTasksArray([])
+        setDeleteAllTasks(false)
+
+
+    }
+
 
     return (<div>
 
@@ -159,11 +207,11 @@ const App = () => {
         </ul>
 
         <div className="login-section">
-            
+
             <Link to="/prihlaseni" className="login-text">Přihlásit se
-            <CiLogin className="login-icon"></CiLogin>
-            </Link> 
-       
+                <CiLogin className="login-icon"></CiLogin>
+            </Link>
+
         </div>
 
         <div className="form-wrapper">
@@ -222,6 +270,8 @@ const App = () => {
                         )
 
                     })}
+
+                {deleteAllTasks && <button className="delete-all-tasks" onClick={CleareAllLocalStorage} >Vymazat všechny úkoly</button>}
             </div>
 
 
