@@ -1,31 +1,49 @@
-.sign-out-section {
+.sign-out-section-sign-in {
 
 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: end;
     align-items: center;
+    width: 80%;
+    margin-right: 50px;
 
+}
+
+.sign-out-section-not-sign-in {
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    width: 80%;
+    margin-right: 50px;
 
 }
 
 
 
-.auth-user {
+.auth-user-sign-in {
 
     text-align: center;
     color: rgb(48, 37, 7);
-    font-size: 30px;
-    margin-top: 100px;
+    font-size: 20px;
     background-color: aliceblue;
     padding: 6px 20px;
     color: rgb(119, 86, 25);
-    font-size: 25px;
+    border-radius: 10px;
+}
 
+.auth-user-not-sign-in {
 
-
-
-
+    text-align: center;
+    color: rgb(48, 37, 7);
+    font-size: 20px;
+    background-color: aliceblue;
+    padding: 6px 20px;
+    color: rgb(119, 86, 25);
+    border-radius: 10px;
 }
 
 .sign-out-button {
@@ -33,10 +51,10 @@
 
     width: 10%;
     cursor: pointer;
-    margin-top: 20px;
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid black;
+    border: 1px solid rgb(190, 190, 190);
+    background-color: rgb(255, 211, 130);
 
 
 }

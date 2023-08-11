@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom";
 import "./form.css"
+import AuthDetails from "../auth/AuthDetails";
 //ikonky
 import { AiOutlineEdit } from "react-icons/ai";
 import { GoTrash } from "react-icons/go";
@@ -91,7 +92,7 @@ const App = () => {
     useEffect(() => {
 
         localStorage.setItem("deleteAllTasks", JSON.stringify(deleteAllTasks))
-        console.log(deleteAllTasks)
+
 
     }, [deleteAllTasks])
 
@@ -203,13 +204,13 @@ const App = () => {
         </ul>
 
         {warningVisibility && <div className="warning-wrapper">
-            <p className="warning-text">!Pozor! bez přihlášení můžete přijít o své uložené úkoly.</p>
+            <p className="warning-text">!Pozor! Bez přihlášení můžete přijít o své uložené úkoly.</p>
             <AiOutlineCloseCircle onClick={dontShowWarningVisibility} className="warning-close-icon"></AiOutlineCloseCircle>
         </div>}
 
         <div className="login-section">
 
-
+            <AuthDetails></AuthDetails>
             <Link to="/prihlaseni" className="login-text">Přihlásit se
                 <CiLogin className="login-icon"></CiLogin>
             </Link>
