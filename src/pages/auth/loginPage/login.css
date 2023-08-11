@@ -1,124 +1,157 @@
 .sign-in-section {
 
-background-image: url(../../../images/background.jpg);
-background-size: cover;
-width: 100%;
-height: 100vh;
-
-
+  background-image: url(../../../images/background.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
 
 }
 
-
-
 .sign-in-form {
 
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-width: 50%;
-margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
 
 
 }
 
 .sign-in-input {
 
-margin-bottom: 15px;
-width: 100%;
-padding: 10px 10px ;
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 10px 10px;
 
 
 }
 
 input::placeholder {
-    margin-left: 20px;
-    margin: 20px;
-    color: rgb(153, 153, 153);
-  }
-  
+  margin-left: 20px;
+  margin: 20px;
+  color: rgb(153, 153, 153);
+}
+
 
 .sign-in-title {
 
-text-align: center;
-margin-bottom: 15px;
+  text-align: center;
+  margin-bottom: 15px;
 
 }
 
 .register-text {
 
-text-align: center;
-margin-top: 15px;
+  text-align: center;
+  margin-top: 15px;
 
 }
 
 .sign-in-button {
 
-width: 40%;
-background-color: orange;
-padding: 5px 20px;
-border-radius: 20px;
-cursor: pointer;
-
+  width: 40%;
+  background-color: orange;
+  padding: 5px 20px;
+  border-radius: 20px;
+  cursor: pointer;
 
 }
 
 .sign-in-form-wrapper {
-    display: flex;
-    box-shadow: 0px 0px 42px -10px rgba(0,0,0,0.75);
-    width: 50%;
-    margin: auto;
-    height: 400px;
-    margin-top: 100px;
-    border-radius: 50px;
-    transform: translatey(0px);
-	animation: float 6s ease-in-out infinite;
+  display: flex;
+  box-shadow: 0px 0px 42px -10px rgba(0, 0, 0, 0.75);
+  width: 50%;
+  margin: auto;
+  height: 400px;
+  margin-top: 100px;
+  border-radius: 50px;
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
   background-color: aliceblue;
+
 }
 
 .three-side-sign-in-wrapper {
 
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
 
 }
 
 .sign-in-icons-wrapper {
 
-display: flex;
-flex-wrap: nowrap;
-justify-content: center;
-align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 
 }
 
-.go-sign-in-icon, .fb-sign-in-icon {
+.go-sign-in-icon,
+.fb-sign-in-icon {
 
-
-font-size: 25px;
-margin-right: 10px;
-margin-top: 5px;
-cursor: pointer;
-
+  font-size: 25px;
+  margin-right: 10px;
+  margin-top: 5px;
+  cursor: pointer;
 
 }
 
 
 @keyframes float {
-	0% {
-	
-		transform: translatey(0px);
-	}
-	50% {
-		
-		transform: translatey(-10px);
-	}
-	100% {
-	
-		transform: translatey(0px);
-	}
+  0% {
+
+    transform: translatey(0px);
+  }
+
+  50% {
+
+    transform: translatey(-10px);
+  }
+
+  100% {
+
+    transform: translatey(0px);
+  }
+}
+
+
+/*Media queries*/
+
+@media only screen and (max-width: 1050px) {
+
+  .sign-in-button {
+
+    width: 60%;
+
+  }
+
+  .sign-in-form-wrapper {
+
+    width: 70%;
+    
+  }
+
+}
+
+@media only screen and (max-width: 680px) {
+
+  .sign-in-button {
+
+    width: 80%;
+
+  }
+
+  .sign-in-form-wrapper {
+
+    width: 90%;
+    margin-top: 50px;
+
+  }
+
 }

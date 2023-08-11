@@ -6,7 +6,7 @@ import { auth } from "../../../data/firebase"
 import { createUserWithEmailAndPassword } from "firebase/auth"
 //flashMessage
 import { ToastContainer, toast } from 'react-toastify';
-import {succesRegistrationNotify} from "../../../data/Notifications"
+import { succesRegistrationNotify } from "../../../data/Notifications"
 import 'react-toastify/dist/ReactToastify.css'
 
 
@@ -53,19 +53,19 @@ export const Register = () => {
 
     <div className="sign-up-section">
 
-<ToastContainer
-                position="top-right"
-                autoClose={2000}
-                limit={2}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="light"
-            />
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        limit={2}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
 
       <AuthDetails></AuthDetails>
       <div className="sign-up-form-wrapper">

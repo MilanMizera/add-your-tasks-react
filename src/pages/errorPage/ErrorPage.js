@@ -4,14 +4,14 @@ export const ErrorPage = () => {
 
   return (
 
-    <div  className="error-section">
-    
-        <p className="number">404</p>
-        <p className="text">Stránka nenalezena</p>
-        
-        
+    <div className="error-section">
 
-        </div>
+      <p className="number">404</p>
+      <p className="text">Stránka nenalezena</p>
+
+
+
+    </div>
   )
 }
 

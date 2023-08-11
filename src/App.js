@@ -9,10 +9,10 @@ import Login from "./pages/auth/loginPage/Login";
 const App = () => {
   return <BrowserRouter>
     <Routes>
-      <Route path="/" element={ <Form /> } />
-      <Route path="/prihlaseni" element={ <Login /> } />
-      <Route path="/registrace" element={ <Register /> } />
-      <Route path="*" element={<ErrorPage/>} />
+      <Route path="/" element={<Form />} />
+      <Route path="/prihlaseni" element={<Login />} />
+      <Route path="/registrace" element={<Register />} />
+      <Route path="*" element={<ErrorPage />} />
     </Routes>
   </BrowserRouter>
 
