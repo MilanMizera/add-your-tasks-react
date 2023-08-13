@@ -1,5 +1,5 @@
 .sign-in-section {
-
+  padding-top: 30px;
   background-image: url(../../../images/background.jpg);
   background-size: cover;
   width: 100%;
@@ -16,7 +16,6 @@
   width: 50%;
   margin: auto;
 
-
 }
 
 .sign-in-input {
@@ -24,7 +23,6 @@
   margin-bottom: 15px;
   width: 100%;
   padding: 10px 10px;
-
 
 }
 
@@ -60,6 +58,7 @@ input::placeholder {
 }
 
 .sign-in-form-wrapper {
+
   display: flex;
   box-shadow: 0px 0px 42px -10px rgba(0, 0, 0, 0.75);
   width: 50%;
@@ -134,7 +133,7 @@ input::placeholder {
   .sign-in-form-wrapper {
 
     width: 70%;
-    
+
   }
 
 }

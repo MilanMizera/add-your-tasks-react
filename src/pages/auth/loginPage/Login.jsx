@@ -81,8 +81,6 @@ export const Login = () => {
 
     <div className="sign-in-section">
 
-      <AuthDetails></AuthDetails>
-
       <div className="sign-in-form-wrapper">
         <form className="sign-in-form" onSubmit={signIn}>
           <h1 className="sign-in-title">Přihlášení</h1>

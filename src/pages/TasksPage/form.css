@@ -116,13 +116,7 @@
 
 }
 
-.login-wrapper {
-
-    display: flex;
-    flex-direction: row;
-
-}
-
+/*warning section*/
 .warning-wrapper {
 
     display: flex;
@@ -148,13 +142,14 @@
 
 }
 
+
+/* login section*/
 .login-section {
 
     display: flex;
-    justify-content: end;
-    margin-right: 50px;
-    margin-top: 20px;
-
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
 
 }
 
@@ -168,12 +163,6 @@
     animation: pulse 2s infinite;
     cursor: pointer;
 
-
-}
-
-.login-background-btn:hover {
-
-    animation: none;
 }
 
 .login-text {
@@ -185,7 +174,7 @@
     color: black;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;
+    padding: 8px 15px;
     border-radius: 20px;
     animation: pulse 2s infinite;
     cursor: pointer;
@@ -206,7 +195,42 @@
     color: orange;
 }
 
+.sign-out-section-sign-in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    padding: 5px 5px;
+    background-color: aliceblue;
+    margin-right: 50px;
+    border-radius: 20px;
 
+}
+
+.sign-out-button {
+
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 2px 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid rgb(190, 190, 190);
+
+}
+
+.auth-user-not-sign-in {
+
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 227, 184);
+    margin-right: 80px;
+    padding: 10px 1px;
+    border-radius: 10px;
+
+
+}
 
 .form-wrapper {
 
@@ -216,7 +240,7 @@
     width: 70%;
     height: auto;
     margin: 0px auto;
-    margin-top: 100px;
+    margin-top: 80px;
     margin-bottom: 80px;
     padding: 50px 0px;
     vertical-align: middle;
@@ -530,6 +554,31 @@
 
 }
 
+@media only screen and (max-width: 1050px) {
+
+    .login-section {
+
+        flex-direction: column-reverse;
+
+    }
+
+    .sign-out-section-sign-in {
+
+        margin-top: 20px;
+        margin-right: 0px;
+        width: 440px;
+
+    }
+
+    .auth-user-not-sign-in {
+
+        margin: 0px;
+        margin-top: 20px;
+    }
+
+
+}
+
 @media only screen and (max-width: 1000px) {
     .login-section {
 
@@ -540,7 +589,7 @@
     .form-wrapper {
 
 
-        margin-top: 80px;
+        margin-top: 50px;
 
     }
 

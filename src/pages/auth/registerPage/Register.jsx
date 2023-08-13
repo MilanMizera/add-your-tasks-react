@@ -67,7 +67,6 @@ export const Register = () => {
         theme="light"
       />
 
-      <AuthDetails></AuthDetails>
       <div className="sign-up-form-wrapper">
         <form className="sign-up-form" onSubmit={signUp}>
           <h1 className="sign-up-title">Vytvořit účet</h1>
@@ -77,9 +76,6 @@ export const Register = () => {
           <input className="sign-up-button" type="submit" value="Registrovat se" ></input>
         </form>
       </div>
-
-
-
 
     </div>
   )
