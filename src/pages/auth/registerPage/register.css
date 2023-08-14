@@ -98,6 +98,14 @@ input::placeholder {
 
 @media only screen and (max-width: 1050px) {
 
+  .sign-up-section {
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+  }
+
   .sign-up-button {
 
     width: 60%;
@@ -116,6 +124,12 @@ input::placeholder {
 
 @media only screen and (max-width: 680px) {
 
+  .sign-up-title {
+
+    font-size: 23px;
+
+  }
+
   .sign-up-button {
 
     width: 80%;
@@ -130,17 +144,14 @@ input::placeholder {
 
   .sign-up-form {
 
-    width:80%;
+    width: 80%;
 
- }
+  }
 
- .sign-up-section {
+  .sign-up-section {
 
-   padding-top: 30px;
-   
-   }
+    padding-top: 30px;
+
+  }
 
 }
-
-
-

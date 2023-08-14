@@ -126,6 +126,15 @@ input::placeholder {
 
 @media only screen and (max-width: 1050px) {
 
+
+  .sign-in-section {
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+  }
+
   .sign-in-button {
 
     width: 60%;
@@ -142,6 +151,12 @@ input::placeholder {
 
 @media only screen and (max-width: 680px) {
 
+  .sign-in-title {
+
+    font-size: 23px;
+
+  }
+
   .sign-in-button {
 
     width: 80%;
@@ -154,14 +169,13 @@ input::placeholder {
     margin-top: 50px;
 
   }
-
 }
 
 @media only screen and (max-width: 520px) {
 
   .sign-in-form {
 
-     width:80%;
+    width: 70%;
 
   }
 

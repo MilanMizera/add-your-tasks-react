@@ -646,6 +646,8 @@ width: 200px;
     .sign-out-section-sign-in {
 
         flex-direction: column;
+        padding-top: 10px;
+        padding-bottom: 10px;
 
     }
 
