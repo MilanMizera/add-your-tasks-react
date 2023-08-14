@@ -23,6 +23,8 @@
   margin-bottom: 15px;
   width: 100%;
   padding: 10px 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(160, 160, 160);
 
 }
 
@@ -150,6 +152,16 @@ input::placeholder {
 
     width: 90%;
     margin-top: 50px;
+
+  }
+
+}
+
+@media only screen and (max-width: 520px) {
+
+  .sign-in-form {
+
+     width:80%;
 
   }
 

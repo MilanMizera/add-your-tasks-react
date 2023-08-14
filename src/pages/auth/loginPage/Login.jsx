@@ -84,8 +84,8 @@ export const Login = () => {
       <div className="sign-in-form-wrapper">
         <form className="sign-in-form" onSubmit={signIn}>
           <h1 className="sign-in-title">Přihlášení</h1>
-          <input className="sign-in-input" onChange={(e) => setEmail(e.target.value)} type="email" placeholder="zde zadejte váš email" value={email}></input>
-          <input className="sign-in-input" onChange={(e) => setPassword(e.target.value)} type="password" placeholder="zde zadejte vaše heslo" value={password}></input>
+          <input className="sign-in-input" onChange={(e) => setEmail(e.target.value)} type="email" placeholder="E-mail" value={email}></input>
+          <input className="sign-in-input" onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Heslo" value={password}></input>
           <input className="sign-in-button" type="submit" value="Přihlásit se" ></input>
           <div className="three-side-sign-in-wrapper">
             <p className="sign-in-icons-text">Přihlásit se pomocí:</p>

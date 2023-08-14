@@ -24,6 +24,8 @@
   margin-bottom: 15px;
   width: 100%;
   padding: 10px 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(160, 160, 160);
 
 }
 
@@ -126,4 +128,19 @@ input::placeholder {
     margin-top: 50px;
   }
 
+  .sign-up-form {
+
+    width:80%;
+
+ }
+
+ .sign-up-section {
+
+   padding-top: 30px;
+   
+   }
+
 }
+
+
+

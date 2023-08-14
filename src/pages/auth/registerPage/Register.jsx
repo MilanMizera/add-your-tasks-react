@@ -70,9 +70,9 @@ export const Register = () => {
       <div className="sign-up-form-wrapper">
         <form className="sign-up-form" onSubmit={signUp}>
           <h1 className="sign-up-title">Vytvořit účet</h1>
-          <input required className="sign-up-input" onChange={(e) => setEmail(e.target.value)} type="email" placeholder="zde zadejte váš email" value={email}></input>
+          <input required className="sign-up-input" onChange={(e) => setEmail(e.target.value)} type="email" placeholder="E-mail" value={email}></input>
           {Visibility && <p className="password-must-contain"> *heslo musí obsahovat minimálně 8 znaků</p>}
-          <input required className="sign-up-input" onChange={(e) => setPassword(e.target.value)} type="password" placeholder="zde zadejte vaše heslo" value={password}></input>
+          <input required className="sign-up-input" onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Heslo" value={password}></input>
           <input className="sign-up-button" type="submit" value="Registrovat se" ></input>
         </form>
       </div>
