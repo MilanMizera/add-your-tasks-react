@@ -1,4 +1,4 @@
-import AuthDetails from "../AuthDetails"
+
 import "./register.css"
 import { useState } from "react"
 //database

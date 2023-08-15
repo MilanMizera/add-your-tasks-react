@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 //databáze
 import { auth, googleProvider } from "../../../data/firebase"
 import { signInWithEmailAndPassword, signInWithPopup, FacebookAuthProvider } from "firebase/auth"
-import AuthDetails from "../AuthDetails"
+
 //ikonky
 import { FcGoogle } from "react-icons/fc";
 import { BsFacebook } from "react-icons/bs";

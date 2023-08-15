@@ -1,4 +1,4 @@
-import "./authDetails.css"
+
 import { useEffect, useState } from "react"
 //database
 import { auth } from "../../data/firebase"
