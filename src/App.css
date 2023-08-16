@@ -1,12 +1,33 @@
-#light {
+/*Pozadí všech stránek v režimu DARK */
 
-background-color: white;
+#dark .background {
+
+    background: rgb(71, 71, 71);
+
+}
+
+#dark .sign-in-section {
+
+    box-shadow: 0px 4px 4px 0px #00000040,inset 0 0 0 1000px rgb(71, 71, 71, .7)
+   
 
 }
 
+#dark .sign-up-section {
 
-#dark {
-
-    background-color: black;
+    box-shadow: 0px 4px 4px 0px #00000040,inset 0 0 0 1000px rgb(71, 71, 71, .7)
+   
 
 }
+
+.switch label {
+    margin: 10px;
+  }
+  
+  #light .switch label {
+    color: black;
+  }
+  
+  #dark .switch label {
+    color: white;
+  }

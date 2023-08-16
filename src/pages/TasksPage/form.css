@@ -233,6 +233,16 @@
 
 }
 
+/*Switch mode button*/
+
+.switch {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:300px;
+}
+
 .form-wrapper {
 
 

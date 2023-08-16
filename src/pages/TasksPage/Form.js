@@ -16,8 +16,9 @@ import Typewriter from 'typewriter-effect';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import { succesTaskNotify, errorTaskNotify } from "../../data/Notifications";
-
+//  samotný toogler stážený z npm
 import ReactSwitch from "react-switch";
+// nahrání dat jako objekt(obj.props), který můžu globálně použít
 import { ThemeContext } from "../../App";
 
 
@@ -220,16 +221,16 @@ const App = () => {
         </div>}
 
         <div className="login-section">
+        <div className="switch">
+            <label> {themeMode.theme === "light" ? "Světlý režim" : "Tmavý režim"}</label>
+            <ReactSwitch onChange={themeMode.toggleTheme} checked={themeMode.theme === "dark"} />
+        </div>
             <AuthDetails></AuthDetails>
             <Link to="/prihlaseni" className="login-text">Přihlásit se
                 <CiLogin className="login-icon"></CiLogin>
             </Link>
         </div>
 
-        <div className="switch">
-            <label> {themeMode.theme === "light" ? "Light Mode" : "Dark Mode"}</label>
-            <ReactSwitch onChange={themeMode.toggleTheme} checked={themeMode.theme === "dark"} />
-        </div>
 
         <div className="form-wrapper">
 

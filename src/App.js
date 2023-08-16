@@ -5,7 +5,7 @@ import Register from "./pages/auth/registerPage/Register";
 import ErrorPage from "./pages/errorPage/ErrorPage";
 import Login from "./pages/auth/loginPage/Login";
 import { createContext, useState } from "react";
-import ReactSwitch from "react-switch";
+
 
 
 
@@ -26,10 +26,6 @@ const App = () => {
 
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="app" id={theme}>
-        <div className="switch">
-          <label> {theme === "light" ? "Light Mode" : "Dark Mode"}</label>
-          <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
-        </div>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Form />} />
