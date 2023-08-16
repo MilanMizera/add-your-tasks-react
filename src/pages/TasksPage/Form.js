@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import { Link } from "react-router-dom";
 import "./form.css"
 import AuthDetails from "../auth/AuthDetails";
+
 //ikonky
 import { AiOutlineEdit } from "react-icons/ai";
 import { GoTrash } from "react-icons/go";
@@ -15,6 +16,11 @@ import Typewriter from 'typewriter-effect';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import { succesTaskNotify, errorTaskNotify } from "../../data/Notifications";
+
+import ReactSwitch from "react-switch";
+import { ThemeContext } from "../../App";
+
+
 
 
 
@@ -61,6 +67,10 @@ const App = () => {
     const [deleteAllTasks, setDeleteAllTasks] = useState(false)
     const [editId, setEditId] = useState(0)
     const [warningVisibility, setWarningVisibility] = useState(true)
+
+
+    const themeMode = useContext(ThemeContext)
+    console.log(themeMode)
 
     useEffect(() => {
 
@@ -203,18 +213,22 @@ const App = () => {
             <li></li> <li></li> <li></li> <li></li> <li></li>
         </ul>
 
+
         {warningVisibility && <div className="warning-wrapper">
             <p className="warning-text">!Pozor! Bez přihlášení můžete přijít o své uložené úkoly.</p>
             <AiOutlineCloseCircle onClick={dontShowWarningVisibility} className="warning-close-icon"></AiOutlineCloseCircle>
         </div>}
 
         <div className="login-section">
-
             <AuthDetails></AuthDetails>
             <Link to="/prihlaseni" className="login-text">Přihlásit se
                 <CiLogin className="login-icon"></CiLogin>
             </Link>
+        </div>
 
+        <div className="switch">
+            <label> {themeMode.theme === "light" ? "Light Mode" : "Dark Mode"}</label>
+            <ReactSwitch onChange={themeMode.toggleTheme} checked={themeMode.theme === "dark"} />
         </div>
 
         <div className="form-wrapper">
