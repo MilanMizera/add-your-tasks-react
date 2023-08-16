@@ -22,11 +22,6 @@ import ReactSwitch from "react-switch";
 import { ThemeContext } from "../../App";
 
 
-
-
-
-
-
 const getArrayTasks = () => {
 
     let list = localStorage.getItem("tasks")
@@ -69,9 +64,27 @@ const App = () => {
     const [editId, setEditId] = useState(0)
     const [warningVisibility, setWarningVisibility] = useState(true)
 
-
+    // uložení režimu šablony na localstorage
     const themeMode = useContext(ThemeContext)
-    console.log(themeMode)
+    console.log(themeMode.theme)
+
+//data jsem si poslal z app.js pomocí useContext
+    useEffect(() => {
+
+        const data = localStorage.getItem("theme")
+        themeMode.setTheme(JSON.parse(data))
+
+    }, [])
+
+  
+    useEffect(() => {
+
+        localStorage.setItem("theme", JSON.stringify(themeMode.theme))
+
+    }, [themeMode.theme])
+
+
+
 
     useEffect(() => {
 
@@ -221,10 +234,10 @@ const App = () => {
         </div>}
 
         <div className="login-section">
-        <div className="switch">
-            <label> {themeMode.theme === "light" ? "Světlý režim" : "Tmavý režim"}</label>
-            <ReactSwitch onChange={themeMode.toggleTheme} checked={themeMode.theme === "dark"} />
-        </div>
+            <div className="switch">
+                <label> {themeMode.theme === "light" ? "Světlý režim" : "Tmavý režim"}</label>
+                <ReactSwitch onChange={themeMode.toggleTheme} checked={themeMode.theme === "dark"} />
+            </div>
             <AuthDetails></AuthDetails>
             <Link to="/prihlaseni" className="login-text">Přihlásit se
                 <CiLogin className="login-icon"></CiLogin>

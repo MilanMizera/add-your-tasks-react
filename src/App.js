@@ -24,7 +24,7 @@ const App = () => {
 
   return (
 
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, setTheme }}>
       <div className="app" id={theme}>
         <BrowserRouter>
           <Routes>

@@ -553,6 +553,11 @@
 
 @media only screen and (max-width: 1050px) {
 
+    .switch {
+
+        margin-top: 10px;
+    }
+
     .login-section {
 
         flex-direction: column-reverse;
