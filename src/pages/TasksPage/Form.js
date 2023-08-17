@@ -202,7 +202,7 @@ const App = () => {
     }
 
 
-    return (<div>
+    return (<div className="Form">
 
         <ul className="background">
 

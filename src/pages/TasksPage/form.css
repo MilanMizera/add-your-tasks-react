@@ -699,6 +699,12 @@
 
 @media only screen and (max-width: 450px) {
 
+    .background {
+
+        width: 100%;
+        height: 100%;
+    }
+
     .Typewriter__wrapper {
 
         font-size: 22px;
@@ -777,11 +783,7 @@
 
     }
 
-    .form-wrapper {
-
-        width: 100%;
-
-    }
+    
 
 
 
