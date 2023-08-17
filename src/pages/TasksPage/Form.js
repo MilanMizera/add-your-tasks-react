@@ -64,9 +64,9 @@ const App = () => {
     const [editId, setEditId] = useState(0)
     const [warningVisibility, setWarningVisibility] = useState(true)
 
-    // uložení režimu šablony na localstorage
+
     const themeMode = useContext(ThemeContext)
-    console.log(themeMode.theme)
+
 
 
     useEffect(() => {
@@ -109,22 +109,6 @@ const App = () => {
         // preventDefault vypne refrešování formuláře, aby tam zůstala hodnota od uživatele, ale pozor musí být definováná parametr s názvem event
         event.preventDefault()
 
-        if (editId) {
-            const editTodo = tasksArray.find((oneTask) => oneTask.id === editId);
-
-            const updatedTodos = tasksArray.map((oneTask) =>
-                oneTask.id === editTodo.id
-                    ? (oneTask = { id: oneTask.id, userValue })
-                    : { id: oneTask.id, todo: oneTask.userValue }
-
-            )
-            setTasksArray(updatedTodos)
-            setEditId(0)
-            setUserValue("")
-            return
-        }
-
-
         if (userValue && userValue.length < 27) {
 
             const newTask = { taskName: userValue, id: crypto.randomUUID() }
@@ -156,7 +140,17 @@ const App = () => {
         } else {
 
             errorTaskNotify()
+        }
 
+
+        if (editId) {
+            const editTask = tasksArray.find((i) => i.id === editId);
+            const updatedTasks = tasksArray.map((t) =>
+                t.id === editTask.id ? t = { id: t.id, taskName: userValue } : { id: t.id, taskName: t.taskName }
+            )
+            setTasksArray(updatedTasks);
+            setEditId(0);
+            return;
         }
     }
 
@@ -182,6 +176,7 @@ const App = () => {
         })
 
         setUserValue(editTask.taskName)
+        console.log(editTask.taskName)
         setEditId(localId)
 
     }
