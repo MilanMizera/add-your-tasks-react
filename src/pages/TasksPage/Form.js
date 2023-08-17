@@ -121,6 +121,7 @@ const App = () => {
 
             setUserValue("")
             setCountTasks(countTasks + 1)
+            console.log(countTasks)
             succesTaskNotify()
 
 
@@ -164,6 +165,18 @@ const App = () => {
         })
 
         setCountTasks(countTasks - 1)
+
+        if (countTasks < 5) {
+
+            setDeleteAllTasks(false)
+
+        } else {
+
+            setDeleteAllTasks(deleteAllTasks)
+        }
+
+
+        console.log(countTasks)
         setTasksArray(filtredTasks)
 
     }
