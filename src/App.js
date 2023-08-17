@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Register from "./pages/auth/registerPage/Register";
 import ErrorPage from "./pages/errorPage/ErrorPage";
 import Login from "./pages/auth/loginPage/Login";
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 
 
@@ -13,8 +13,22 @@ export const ThemeContext = createContext(null)
 
 const App = () => {
 
-
   const [theme, setTheme] = useState("dark")
+
+  useEffect(() => {
+
+    return JSON.parse(localStorage.getItem("theme"))
+
+  }, [])
+
+
+  useEffect(() => {
+
+    localStorage.setItem("theme", JSON.stringify(theme))
+
+  }, [theme])
+
+
 
   const toggleTheme = () => {
 

@@ -68,23 +68,6 @@ const App = () => {
     const themeMode = useContext(ThemeContext)
     console.log(themeMode.theme)
 
-    //data jsem si poslal z app.js pomocí useContext
-    useEffect(() => {
-
-        const data = localStorage.getItem("theme")
-        themeMode.setTheme(JSON.parse(data))
-
-    }, [])
-
-
-    useEffect(() => {
-
-        localStorage.setItem("theme", JSON.stringify(themeMode.theme))
-
-    }, [themeMode.theme])
-
-
-
 
     useEffect(() => {
 
