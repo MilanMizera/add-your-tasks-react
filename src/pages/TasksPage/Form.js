@@ -150,6 +150,7 @@ const App = () => {
             )
             setTasksArray(updatedTasks);
             setEditId(0);
+            setCountTasks(countTasks)
             return;
         }
     }
@@ -178,7 +179,6 @@ const App = () => {
         setUserValue(editTask.taskName)
         console.log(editTask.taskName)
         setEditId(localId)
-
     }
 
     const CleareAllLocalStorage = () => {
