@@ -14,10 +14,8 @@ import { FaEyeSlash, FaEye } from "react-icons/fa";
 
 
 
-const isNumberRegx = /\d/;
-const specialCharacterRegx = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
-
 export const Register = () => {
+
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -31,6 +29,10 @@ export const Register = () => {
     specialChar: null,
 
   })
+
+  const isNumberRegx = /\d/;
+  const specialCharacterRegx = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+
 
   /* UseNavigate slouží k přesměrování na jinou stránku*/
   const navigate = useNavigate()
