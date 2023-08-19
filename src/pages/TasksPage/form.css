@@ -346,7 +346,6 @@
 
 .user-data-wrapper {
 
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -365,6 +364,8 @@
     overflow: hidden;
 
 }
+
+
 
 .user-data-section {
 
@@ -677,6 +678,29 @@
 
 
 @media only screen and (max-width: 490px) {
+
+
+
+    ::-webkit-scrollbar {
+        width: 0px;
+        height: 2px;
+        background-color: orange;
+
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgb(153, 153, 153);
+        border-radius: 30px;
+
+    }
+
+
+    .user-data-paragraf {
+
+        overflow: scroll;
+        padding-bottom: 4px;
+
+    }
 
     .sign-out-section-sign-in {
 
