@@ -20,7 +20,6 @@ export const Register = () => {
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-  const [Visibility, setVisibility] = useState(false)
   const [passwordVisibility, setPasswordVisibility] = useState(false)
   const [inputType, setInputType] = useState("password")
   const [passwordFocused, setPasswordFocused] = useState(false)
@@ -36,7 +35,7 @@ export const Register = () => {
 
     e.preventDefault()
 
-    if (password && email && password.length >= 8) {
+    if (password && email && password.length >= 8 && passwordValidity.number && passwordValidity.specialChar) {
       //vytvoří nového uživatele s daty z inputu které zadával
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
@@ -50,11 +49,6 @@ export const Register = () => {
 
       succesRegistrationNotify()
       setPassword("")
-      setVisibility(false)
-
-    } else {
-
-      setVisibility(true)
 
     }
 
@@ -108,8 +102,6 @@ export const Register = () => {
           <h1 className="sign-up-title">Vytvořit účet</h1>
 
           <input required className="sign-up-input" onChange={(e) => setEmail(e.target.value)} type="email" placeholder="E-mail" value={email}></input>
-          {Visibility && <p className="password-must-contain"> *heslo musí obsahovat minimálně 8 znaků</p>}
-
 
           <div className="password-wrapper">
             <input required className="sign-up-input-password" onFocus={() => { setPasswordFocused(true) }} onChange={(e) => onChangePassword(e.target.value)} type={inputType} placeholder="Heslo" value={password}></input>
