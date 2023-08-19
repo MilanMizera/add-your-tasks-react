@@ -109,7 +109,7 @@ const App = () => {
         // preventDefault vypne refrešování formuláře, aby tam zůstala hodnota od uživatele, ale pozor musí být definováná parametr s názvem event
         event.preventDefault()
 
-        if (userValue && userValue.length < 27) {
+        if (userValue && userValue.length < 60) {
 
             const newTask = { taskName: userValue, id: crypto.randomUUID() }
 
