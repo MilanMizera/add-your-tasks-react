@@ -1,6 +1,7 @@
 
 import "./register.css"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 //database
 import { auth } from "../../../data/firebase"
 import { createUserWithEmailAndPassword } from "firebase/auth"
@@ -31,10 +32,14 @@ export const Register = () => {
 
   })
 
+  /* UseNavigate slouží k přesměrování na jinou stránku*/
+  const navigate = useNavigate()
+
   const signUp = (e) => {
 
     e.preventDefault()
 
+    /* splnění podmínek při registraci jinak to uživatele nezaregistruje*/
     if (password && email && password.length >= 8 && passwordValidity.number && passwordValidity.specialChar) {
       //vytvoří nového uživatele s daty z inputu které zadával
       createUserWithEmailAndPassword(auth, email, password)
@@ -49,6 +54,7 @@ export const Register = () => {
 
       succesRegistrationNotify()
       setPassword("")
+      setTimeout(() => { navigate("/") }, 2000)
 
     }
 
