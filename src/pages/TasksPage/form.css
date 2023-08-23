@@ -368,14 +368,14 @@
 
 ::-webkit-scrollbar {
     width: 0px;
-    height: 2px;
+    height: 8px;
     background-color: orange;
     cursor: pointer;
 
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(153, 153, 153);
+    background-color: rgb(23, 189, 87);
     border-radius: 30px;
     cursor: pointer;
 
